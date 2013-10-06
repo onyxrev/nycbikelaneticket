@@ -3,7 +3,13 @@ Nycbikelaneticket::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'application#home'
+
+  controller :plaintiffs, :path => "/plaintiffs" do
+    get  "/"    => :new,    :as => :plaintiffs
+    get  "/new" => :new,    :as => :new_plaintiff
+    post "/new" => :create, :as => :create_plaintiff
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -39,7 +45,7 @@ Nycbikelaneticket::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
