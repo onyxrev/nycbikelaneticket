@@ -31,11 +31,14 @@ gem 'money-rails'
 
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
                               :github  => 'anjlab/bootstrap-rails'
+gem 'anjlab-widgets'
 
 gem "attr_encrypted"
-gem "formtastic-bootstrap"
+gem "simple_form"
+gem "country_select"
 gem "geocoder"
 gem "enumerize"
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
