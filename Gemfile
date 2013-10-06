@@ -33,7 +33,9 @@ gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
                               :github  => 'anjlab/bootstrap-rails'
 
 gem "attr_encrypted"
-gem 'formtastic-bootstrap'
+gem "formtastic-bootstrap"
+gem "geocoder"
+gem "enumerize"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
