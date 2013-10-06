@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% plaintiffs.each do |plaintiff| %>
+    <tr class="plaintiff">
+      <td class="date">
+        <%= plaintiff.date %>
+      </td>
+      <td class="name">
+        <%= plaintiff.fullname %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
