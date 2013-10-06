@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Nycbikelaneticket::Application.config.secret_key_base = 'd04e30578925acda1b0389cc349735bf33727b634012486f707f09bd4920bc66e11050d0a0fdad474cc244c3dc2eafd6bec71d39f8b653429396b04cb89a06a2'
+Nycbikelaneticket::Application.config.secret_key_base = ENV["NYCBIKELANETICKET_SECRET_TOKEN"]
