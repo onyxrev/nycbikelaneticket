@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>NYC "Riding Outside the Bike Lane" Class Action Lawsuit</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>NYC "Riding Outside the Bike Lane" Class Action Lawsuit</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<div class="row">
-  <%= yield %>
-  <%= image_tag('bg_side.jpg', :class => "gutter-image") %>
-</div>
+    <div class="row">
+      <%= yield %>
+      <%= image_tag('bg_side.jpg', :class => "gutter-image") %>
+    </div>
 
-</body>
+    <footer>
+      Side photo (CC) <a href="http://www.flickr.com/photos/notionscapital/9565353765/" target="_blank">Mike Licht</a>
+    </footer>
+  </body>
 </html>

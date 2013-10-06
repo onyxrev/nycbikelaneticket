@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131006063326) do
+ActiveRecord::Schema.define(version: 20131006183457) do
 
   create_table "plaintiffs", force: true do |t|
     t.string   "fullname"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20131006063326) do
     t.boolean  "is_public"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "country_code"
   end
 
   create_table "tickets", force: true do |t|
@@ -45,6 +46,8 @@ ActiveRecord::Schema.define(version: 20131006063326) do
     t.integer  "plaintiff_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
 end
