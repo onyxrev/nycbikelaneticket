@@ -1,62 +1,20 @@
 Nycbikelaneticket::Application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
   root 'application#home'
 
   controller :plaintiffs, :path => "/plaintiffs" do
-    get  "/"    => :new,    :as => :plaintiffs
+    get  "/"    => :index,  :as => :plaintiffs
+    post "/"    => :create, :as => :create_plaintiff
     get  "/new" => :new,    :as => :new_plaintiff
-    post "/new" => :create, :as => :create_plaintiff
   end
 
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  controller :tickets, :path => "/tickets" do
+    get  "/"    => :index,  :as => :tickets
+    post "/"    => :create, :as => :create_ticket
+    get  "/new" => :new,    :as => :new_ticket
+  end
 
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
-
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
-
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+  controller :sessions, :path => "/sessions" do
+    post "/"   => :create, :as => :create_session
+    get "/new" => :new,    :as => :new_session
+  end
 end

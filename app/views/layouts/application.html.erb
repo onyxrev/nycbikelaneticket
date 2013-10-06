@@ -4,10 +4,13 @@
     <title>NYC "Riding Outside the Bike Lane" Class Action Lawsuit</title>
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYBkAMYhjW9RnyzD_CmToPaLsahCOsN9I&sensor=false"></script>
+
     <%= csrf_meta_tags %>
   </head>
   <body>
-
+    <h1 id="logo"><span class="nyc">NYC</span> <span class="bike-lane">Bike Lane Ticket</span> Class Action Lawsuit</h1>
     <div class="row">
       <%= yield %>
       <%= image_tag('bg_side.jpg', :class => "gutter-image") %>

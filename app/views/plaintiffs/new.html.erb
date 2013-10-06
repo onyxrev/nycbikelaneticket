@@ -1,5 +1,16 @@
-<%= semantic_form_for @plaintiff do |f| %>
-  <%= f.inputs :fullname, :street_address1, :street_address2, :postal_code, :phone, :email %>
-  <%= f.action :submit, :as => :button, :button_html => { :class => "btn btn-primary" } %>
-  <%= f.action :cancel, :as => :link,   :button_html => { :class => "btn btn-default" } %>
-<% end %>
+<div class="col-md-6">
+  <%= link_to "&larr; return home".html_safe, root_path %>
+  <h2>Your information</h2>
+  <%= simple_form_for @plaintiff do |f| %>
+    <%= f.input :fullname %>
+    <%= f.input :street_address1 %>
+    <%= f.input :street_address2 %>
+    <%= f.input :postal_code %>
+    <%= f.input :country_code %>
+    <%= f.input  :phone %>
+    <%= f.input :email %>
+    <br/>
+    <%= f.button :submit, :class => "btn btn-primary" %>
+    <%= link_to "Cancel", root_path, :class => "btn btn-default" %>
+  <% end %>
+</div>

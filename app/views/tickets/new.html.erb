@@ -1,0 +1,31 @@
+<div class="col-md-7">
+  <%= link_to "&larr; return home".html_safe, root_path %>
+  <h2>Your ticket</h2>
+  <%= simple_form_for @ticket do |f| %>
+    <%= f.input :number %>
+
+    <%= f.input :fine_cents,     :as => :string, :input_html => { :value => @ticket.fine_cents ? @ticket.fine_cents / 100 : "",         :size => 5 } %>
+    <%= f.input :expenses_cents, :as => :string, :input_html => { :value => @ticket.expenses_cents ? @ticket.expenses_cents / 100 : "", :size => 5 } %>
+
+    <%= f.input :location, :input_html => { :size => 60 } %>
+
+    <div class="control-group" id="location_map">
+      <div class="map"></div>
+      <p class="message alert">
+    </div>
+
+    <%= f.input :date %>
+    <%= f.input :officer_id %>
+
+    <%= f.input :hearing_date %>
+    <%= f.input :hearing_verdict %>
+
+    <%= f.input :appeal_date %>
+    <%= f.input :appeal_verdict %>
+
+    <%= f.input :description, :input_html => { :cols => 60, :rows => 5 } %>
+    <br/>
+    <%= f.button :submit, :class => "btn btn-primary" %>
+    <%= link_to "Cancel", root_path, :class => "btn btn-default" %>
+  <% end %>
+</div>

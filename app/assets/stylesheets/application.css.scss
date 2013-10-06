@@ -1,5 +1,9 @@
 @import "twitter/bootstrap";
-@import "formtastic-bootstrap";
+@import 'anjlab/datepicker';
+@import 'anjlab/timepicker';
+@import 'icons';
+@import 'forms';
+@import 'maps';
 
 body{
   padding: 5px 2% 2% 22%;
@@ -10,12 +14,42 @@ body{
   width: 100%;
 }
 
+#logo{
+  position: fixed;
+  left: 10px;
+  top: -20px;
+  font-size: 24px;
+  color: white;
+  width: 20%;
+  padding-right: 30px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  z-index: 2;
+  text-shadow: 1px 1px 10px black;
+  text-align: right;
+
+  .nyc{
+    font-size: 92px;
+    display: block;
+  }
+
+  .bike-lane{
+    display: block;
+  }
+}
+
+footer{
+  margin-top: 20px;
+}
+
 .gutter-image{
   position: fixed;
   top: 0;  
   bottom: 0;
   left: 0;
   width: 20%;
+  z-index: 1;
 }
 
 .bw-min, .bw-750{
@@ -23,5 +57,22 @@ body{
 
   .gutter-image{
     display: none;
+  }
+
+  #logo{
+    position: static;
+    width: 100%;
+    text-align: left;
+    text-shadow: none;
+    color: black;
+    display: block;
+    padding: 0;
+    font-size: 32px;
+    text-decoration: underline;
+
+    .nyc, .bike-lane{
+      display: inline;
+      font-size: 1em;
+    }
   }
 }

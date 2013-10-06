@@ -1,0 +1,36 @@
+en:
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'required'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Please review the problems below:"
+    labels:
+      plaintiff:
+        fullname: "Full name"
+        street_address1: "Street address"
+        street_address2: "Unit / apartment"
+        postal_code: "Postal code"
+        country_code: "Country"
+        email: "Email"
+        is_public: "Do you want to be shown in the recent signatures list?"
+      ticket:
+        number: "Ticket Number (generally 10 digits like AA********)"
+        fine_cents: "How much was your fine (in USD)?"
+        expenses_cents: "What is the total cost of additional expenses you had that were associated with the ticket (time off work, postage, transcription/appeal fees in USD)?"
+        location: "Enter the location where the ticketing happened (an intersection, an address, etc)"
+        date: "Ticket date"
+        officer_id: "Officer number"
+        hearing_date: "Hearing date (if applicable, past or future)"
+        hearing_verdict: "Hearing verdict (if applicable)"
+        appeal_date: "Appeal date (when you appealed, if applicable)"
+        appeal_verdict: "Appeal verdit (if applicable)"
+        description: "Anything else you want to share about the ticket? Any details as to what you were doing when you were ticketed? How did the police treat you? How the judge treat you?"
+
+        
+
