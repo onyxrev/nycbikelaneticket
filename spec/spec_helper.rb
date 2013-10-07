@@ -8,10 +8,6 @@ require 'database_cleaner'
 Capybara.default_driver    = :selenium
 Capybara.javascript_driver = :selenium
 
-Capybara.register_driver :selenium do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :chrome)
-end
-
 Capybara.default_wait_time = 10
 Capybara.server_port = 3001
 
@@ -40,6 +36,8 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
   config.order = "random"
+
+  config.include SessionSpecHelper, :type => :feature
 
   config.before(:each) do
     Capybara.current_driver = Capybara.javascript_driver
