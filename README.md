@@ -1,6 +1,8 @@
 NYC Bike Lane Ticket
 ====================
 
+http://www.nycbikelaneticket.com
+
 This web application exists to collect the information of those who have been ticketed in New York City for riding outside of a bicycle lane.  The goal of this collection is to provide the foundation for a class action lawsuit against the City of New York.  These "failure to use the bike lane" tickets are most likely not legally sound but fighting them individually often costs more than the the fine.  We will be more effective together.
 
 This application was written in Ruby on Rails 4.0
