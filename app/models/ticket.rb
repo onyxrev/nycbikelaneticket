@@ -12,6 +12,7 @@ class Ticket < ActiveRecord::Base
   validates :number,                   :uniqueness   => true
   validates :number,                   :format       => { :with => /[A-Z|0-9]{10}/ }
   validates :officer_id,               :numericality => { :only_integer => true }, :allow_blank => true
+  validates :description,              :length     => { :maximum => 2000 }
 
   before_validation :convert_money
   after_validation  :geocode
