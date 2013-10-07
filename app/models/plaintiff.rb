@@ -14,6 +14,7 @@ class Plaintiff < ActiveRecord::Base
   validates :email,                                         :uniqueness => true
   validates :street_address1, :street_address2, :fullname,  :length     => { :maximum => 300 }
   validates :postal_code,                                   :format     => { :with => /[a-z|A-Z|0-9|\-]+/ }
+  validates :email,                                         :format     => { :with => /\A([-a-z0-9!\#$%&'*+\/=?^_`{|}~]+\.)*[-a-z0-9!\#$%&'*+\/=?^_`{|}~]+@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i }
 
   before_validation :sanitize_phone
   before_save       :create_auth_hash
