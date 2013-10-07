@@ -38,6 +38,7 @@ RSpec.configure do |config|
   config.order = "random"
 
   config.include SessionSpecHelper, :type => :feature
+  config.include TicketSpecHelper, :type => :feature
 
   config.before(:each) do
     Capybara.current_driver = Capybara.javascript_driver
