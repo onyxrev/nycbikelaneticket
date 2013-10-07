@@ -1,0 +1,13 @@
+<div class="col-md-4">
+  <%= link_to "&larr; return home".html_safe, root_path %>
+  <h2>Log In</h2>
+  <p>Provide the email and postal code you entered when you registered to submit a new ticket.</p>
+
+  <%= simple_form_for @plaintiff, :url => create_session_path do |f| %>
+    <%= f.input :email, :input_html => { :size => 30 } %>
+    <%= f.input :postal_code, :input_html => { :size => 10 } %>
+    <br/>
+    <%= f.button :submit, :class => "btn btn-primary", :value => "Log in"  %>
+    <%= link_to "Cancel", root_path, :class => "btn btn-default" %>
+  <% end %>
+</div>
