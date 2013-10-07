@@ -30,11 +30,17 @@ class Ticket < ActiveRecord::Base
   private
 
   def convert_dollars_to_cents(dollars)
+    return nil if dollars.blank?
     dollars.to_s.gsub(/[^0-9|\.]/, "").to_f * 100
   end
 
   def convert_money
-    self.fine_cents     = convert_dollars_to_cents(fine_cents)
-    self.expenses_cents = convert_dollars_to_cents(expenses_cents)
+    if self.fine_cents_changed?
+      self.fine_cents     = convert_dollars_to_cents(fine_cents)
+    end
+
+    if self.expenses_cents_changed?
+      self.expenses_cents = convert_dollars_to_cents(expenses_cents)
+    end
   end
 end
