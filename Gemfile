@@ -33,12 +33,12 @@ gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
                               :github  => 'anjlab/bootstrap-rails'
 gem 'anjlab-widgets'
 
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 gem "attr_encrypted"
 gem "simple_form"
 gem "country_select"
 gem "geocoder"
 gem "enumerize"
-
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -58,5 +58,4 @@ end
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'pry', group: [:development, :test]
