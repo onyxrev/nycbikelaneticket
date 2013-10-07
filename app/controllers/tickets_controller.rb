@@ -23,28 +23,14 @@ class TicketsController < ApplicationController
 
   protected
 
-  def get_ticket_params
-    @ticket_params = [
-      :number,
-      :fine,
-      :expenses,
-      :location,
-      :date,
-      :officer_id,
-      :hearing_date,
-      :hearing_verdict,
-      :appeal_date,
-      :appeal_verdict,
-      :description,
-      :plaintiff_id
-    ].reduce({}) do |hash, key|
-      hash[key] = params[:ticket][key]
-      hash
-    end
+  def ticket_params
+    params.require(:ticket).permit(:number, :fine_cents, :expenses_cents, :location, :date, :officer_id, :hearing_date, :hearing_verdict, :appeal_date, :appeal_verdict, :description)
   end
 
-  def check_plaintiff
-    unless session[:plaintiff]
+  def plaintiff_required
+    @plaintiff = session[:plaintiff]
+
+    unless @plaintiff
       flash[:error] = "Please first log in or register as a new plaintiff."
       return redirect_to new_plaintiff_path
     end
