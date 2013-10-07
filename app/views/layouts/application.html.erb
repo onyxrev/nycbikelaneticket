@@ -10,7 +10,15 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <h1 id="logo"><span class="nyc">NYC</span> <span class="bike-lane">Bike Lane Ticket</span> Class Action Lawsuit</h1>
+    <% flash.each do |name, msg| %>
+      <% if msg.is_a?(String) %>
+        <div class="alert alert-dismissable alert-<%= name == :notice ? "success" : "danger" %>">
+          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+        </div>
+      <% end %>
+    <% end %>
+
+    <h1 id="logo"><%= link_to root_path do %><span class="nyc">NYC</span> <span class="bike-lane">Bike Lane Ticket</span> Class Action Lawsuit<% end %></h1>
     <div class="row">
       <%= yield %>
       <%= image_tag('bg_side.jpg', :class => "gutter-image") %>
