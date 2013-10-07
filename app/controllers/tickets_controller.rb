@@ -21,7 +21,7 @@ class TicketsController < ApplicationController
     return redirect_to root_path
   end
 
-  protected
+  private
 
   def ticket_params
     params.require(:ticket).permit(:number, :fine_cents, :expenses_cents, :location, :date, :officer_id, :hearing_date, :hearing_verdict, :appeal_date, :appeal_verdict, :description)
