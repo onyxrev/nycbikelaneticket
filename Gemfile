@@ -45,8 +45,14 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :test do
+group :development, :test do
   gem 'rspec-rails'
+  gem 'email_spec'
+#  gem 'capistrano'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'pry'
 end
 
 # Use ActiveModel has_secure_password
@@ -57,5 +63,3 @@ end
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
-
-gem 'pry', group: [:development, :test]
