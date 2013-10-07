@@ -22,6 +22,6 @@ class PlaintiffsController < ApplicationController
   protected
 
   def plaintiff_params
-    params.require(:plaintiff).permit(:fullname, :street_address1, :street_address2, :postal_code, :email, :phone, :is_public, :country_code)
+    params.require(:plaintiff).permit(:fullname, :street_address1, :street_address2, :postal_code, :email, :phone, :is_public, :country)
   end
 end

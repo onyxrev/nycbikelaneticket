@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131007023002) do
+ActiveRecord::Schema.define(version: 20131007035516) do
 
   create_table "plaintiffs", force: true do |t|
     t.string   "fullname"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20131007023002) do
     t.boolean  "is_public"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "country_code"
+    t.string   "country"
     t.string   "auth_hash"
   end
 

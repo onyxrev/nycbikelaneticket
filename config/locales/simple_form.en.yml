@@ -16,7 +16,7 @@ en:
         street_address1: "Street address"
         street_address2: "Unit / apartment"
         postal_code: "Postal code"
-        country_code: "Country"
+        country: "Country"
         email: "Email"
         is_public: "Do you want to be shown in the recent signatures list?"
       ticket:
