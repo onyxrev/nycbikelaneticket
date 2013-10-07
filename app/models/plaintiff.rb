@@ -50,7 +50,6 @@ class Plaintiff < ActiveRecord::Base
   end
 
   def create_auth_hash
-    binding.pry
     return unless self.email_encrypted_changed? or self.postal_code_encrypted_changed?
     self.auth_hash = Plaintiff.generate_auth_hash(self.email, self.postal_code)
   end
