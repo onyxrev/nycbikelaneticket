@@ -16,7 +16,7 @@ class PlaintiffsController < ApplicationController
   end
 
   def index
-    return redirect_to :root_path
+    return redirect_to root_path
   end
 
   protected
