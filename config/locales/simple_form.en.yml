@@ -30,7 +30,7 @@ en:
         hearing_verdict: "Hearing verdict (if applicable)"
         appeal_date: "Appeal date (when you appealed, if applicable)"
         appeal_verdict: "Appeal verdit (if applicable)"
-        description: "Anything else you want to share about the ticket? Any details as to what you were doing when you were ticketed? How did the police treat you? How the judge treat you?"
+        description: "Anything else you want to share about the ticket? Any details as to what you were doing when you were ticketed? How did the police treat you? How the judge treat you? You have up to 2000 characters."
 
         
 

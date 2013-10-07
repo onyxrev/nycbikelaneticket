@@ -9,8 +9,9 @@ class Ticket < ActiveRecord::Base
   belongs_to :plaintiff
 
   validates :number, :location, :date, :presence     => true
+  validates :number,                   :uniqueness   => true
   validates :number,                   :format       => { :with => /[A-Z|0-9]{10}/ }
-  validates :officer_id,               :numericality => { :only_integer => true }
+  validates :officer_id,               :numericality => { :only_integer => true }, :allow_blank => true
 
   before_validation :convert_money
   after_validation  :geocode
