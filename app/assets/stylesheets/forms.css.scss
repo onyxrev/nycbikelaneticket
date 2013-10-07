@@ -2,4 +2,14 @@ form{
   .control-group + .control-group{
     margin-top: 1em;
   }
+
+  .help-inline{
+    color: red;
+    display: block;
+    
+    &:before{
+      content: "\25b4";
+      margin-right: 3px;
+    }
+  }  
 }
