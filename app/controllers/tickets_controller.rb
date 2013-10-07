@@ -1,19 +1,18 @@
 class TicketsController < ApplicationController
-  before_filter :get_ticket_params,  :only => [ :create ]
-  before_filter :plaintiff_required, :only => [ :check_plaintiff ]
+  before_filter :plaintiff_required, :only => [ :new, :create ]
 
   def new
     @ticket = @ticket || Ticket.new
   end
 
   def create
-    @ticket = Ticket.create(@ticket_params)
+    @ticket = @plaintiff.tickets.create(ticket_params)
 
     unless @ticket and @ticket.errors.empty?
       return render :new
     end
 
-    flash[:info] = "Your ticket has been recorded. Thanks! You can enter another if you are unfortunate to have been ticketed multiple times."
+    flash[:notice] = "Your ticket has been recorded. Thanks! You can enter another if you are unfortunate to have been ticketed multiple times."
 
     return redirect_to new_ticket_path
   end

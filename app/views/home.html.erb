@@ -17,7 +17,8 @@
   <h2>Who made this?</h2>
   <p>NYC Bike Lane Ticket was created by <a href="http://www.danconnor.com" target="_blank">Dan Connor</a>, a web developer in New York.  He bikes a lot and was hit by several of these tickets. The <a href="https://github.com/onyxrev/nycbikelaneticket" target="_blank">source code</a> for this project is open source.</p>
 </div>
-<div class="col-md-6">
-  <h2>Recent Public Signatures</h2>
-  <%= render :partial => "shared/recent_signatures", :locals => { plaintiffs: @plaintiffs } %>
+<div class="col-md-7">
+  <h2>Submitted Tickets: <%= @ticket_count %>
+  <h2>Recently Submitted Tickets</h2>
+  <%= render :partial => "shared/recent_signatures", :locals => { tickets: @tickets } %>
 </div>

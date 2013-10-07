@@ -13,6 +13,19 @@ class Ticket < ActiveRecord::Base
   validates :officer_id,               :numericality => { :only_integer => true }
 
   before_validation :convert_money
+  after_validation  :geocode
+
+  def to_hash(extra_keys = [])
+    hash = {
+      :created_at => self.created_at,
+      :fullname   => self.plaintiff.fullname,
+      :date       => self.date,
+      :lat        => self.latitude,
+      :lng        => self.longitude
+    }
+
+    return hash
+  end
 
   private
 
