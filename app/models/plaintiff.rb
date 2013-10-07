@@ -34,10 +34,8 @@ class Plaintiff < ActiveRecord::Base
     return Plaintiff.where(:auth_hash => Plaintiff.generate_auth_hash(email, postal_code)).first
   end
 
-  def to_hash(extra_keys = [])
-    keys_to_include = [:fullname, :created_at] + extra_keys
-
-    return keys_to_include.reduce({}) do |memo, key|
+  def to_hash
+    return [:fullname, :created_at].reduce({}) do |memo, key|
       memo[key] = self.send(key)
       memo
     end

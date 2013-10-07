@@ -20,8 +20,8 @@ class Ticket < ActiveRecord::Base
       :created_at => self.created_at,
       :fullname   => self.plaintiff.fullname,
       :date       => self.date,
-      :lat        => self.latitude,
-      :lng        => self.longitude
+      :latitude   => self.latitude,
+      :longitude  => self.longitude
     }
 
     return hash

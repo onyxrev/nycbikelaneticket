@@ -20,8 +20,8 @@
           <%= ticket[:date].strftime("%Y/%m/%d") %>
         </td>
         <td>
-          <% if ticket[:lat] and ticket[:lng] %>
-            <a href="http://maps.google.com/maps?q=<%= ticket[:lat] %>,<%= ticket[:lng] %>" target="_blank">View on Google Maps</a>
+          <% if ticket[:latitude] and ticket[:longitude] %>
+            <a href="http://maps.google.com/maps?q=<%= ticket[:latitude] %>,<%= ticket[:longitude] %>" target="_blank">View on Google Maps</a>
           <% else %>
             None provided
           <% end %>
