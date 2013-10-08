@@ -3,6 +3,10 @@ form{
     margin-top: 1em;
   }
 
+  input{
+    max-width: 100%;
+  }
+
   .help-inline{
     color: red;
     display: block;
