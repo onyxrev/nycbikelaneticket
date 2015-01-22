@@ -3,18 +3,14 @@
   <h4>Already registered?</h4>
   <p><%= link_to "Log in", new_session_path %> to submit a new ticket.</p>
 
-  <h2>Register as a Plaintiff</h2>
+  <h2>Register</h2>
   <%= simple_form_for @plaintiff do |f| %>
     <%= f.input :fullname, :input_html => { :size => 40 } %>
-    <%= f.input :street_address1, :input_html => { :size => 40 }  %>
-    <%= f.input :street_address2, :input_html => { :size => 40 }  %>
     <%= f.input :postal_code, :input_html => { :size => 10 } %>
-    <%= f.input :country %>
-    <%= f.input  :phone %>
     <%= f.input :email, :input_html => { :size => 30 }  %>
     <%= f.input :is_public, :as => :radio_buttons %>
     <br/>
-    <%= f.button :submit, :class => "btn btn-primary" %>
+    <%= f.button :submit, "Register", :class => "btn btn-primary" %>
     <%= link_to "Cancel", root_path, :class => "btn btn-default" %>
   <% end %>
 </div>

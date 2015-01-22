@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>NYC "Riding Outside the Bike Lane" Class Action Lawsuit</title>
+    <title>NYC Bicycle Ticket Database</title>
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
     <meta name="description" content="A website to support a class action lawsuit against the City of New York for illegally ticketing cyclists for biking outside of bike lanes." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYBkAMYhjW9RnyzD_CmToPaLsahCOsN9I&sensor=false"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAp-P2qZX4f09_w7Tm4llXfpAVF8W3ktVI&sensor=false"></script>
 
     <%= csrf_meta_tags %>
   </head>
@@ -20,7 +20,7 @@
       <% end %>
     <% end %>
 
-    <h1 id="logo"><%= link_to root_path do %><span class="nyc">NYC</span> <span class="bike-lane">Bike Lane Ticket</span> Class Action Lawsuit<% end %></h1>
+    <h1 id="logo"><%= link_to root_path do %><span class="nyc">NYC</span> <span class="bike-lane">Bike Lane Ticket</span> Database<% end %></h1>
     <div class="row">
       <%= yield %>
       <%= image_tag('bg_side.jpg', :class => "gutter-image") %>

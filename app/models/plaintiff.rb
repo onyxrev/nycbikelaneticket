@@ -10,7 +10,7 @@ class Plaintiff < ActiveRecord::Base
   # gonna allow international postal codes because I'm sure tourists
   # got stung too
   validates :postal_code,                                   :length     => { :maximum => 10 }
-  validates :email, :postal_code, :fullname, :country     , :presence   => true
+  validates :email, :postal_code, :fullname,                :presence   => true
   validates :email,                                         :uniqueness => true
   validates :street_address1, :street_address2, :fullname,  :length     => { :maximum => 300 }
   validates :postal_code,                                   :format     => { :with => /[a-z|A-Z|0-9|\-]+/ }

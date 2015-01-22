@@ -30,7 +30,7 @@
                     position: results[0].geometry.location
                 });
 
-                self.$message.addClass("alert-success").text("Looks like we may have found your ticket location. Does this look right?");
+                self.$message.addClass("alert-success").text("Looks like we may have found your ticket location. If this looks right you can continue.");
             }
             else{
                 self.$message.addClass("alert-danger").text("We weren't able to find that ticket location. Try something more specific.");
